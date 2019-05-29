@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.col {
+  border: black solid 1px;
+  min-height: 90px;
+  padding: 50px;
+  background-color: green;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+.col:hover {
+  -ms-transform: scale(1.5);
+  /* IE 9 */
+  -webkit-transform: scale(1.5);
+  /* Safari 3-8 */
+  transform: scale(1.5);
+  z-index: 1000;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.top-left {
+  position: absolute;
+  /* top: 25px; */
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 260px;
+  z-index: 1001;
+}
+
+.top-right {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 80px;
+  z-index: 1001;
+}
+
+.list-group-item {
+  background: transparent;
+  font-weight: bold;
+  color: white;
+  border: 0px;
+}
+
+.list-group-item:hover {
+  background-color: whitesmoke;
+  font-weight: bold;
+  color: black;
+  opacity: 0.5;
+  border-radius: 15px;
+}
