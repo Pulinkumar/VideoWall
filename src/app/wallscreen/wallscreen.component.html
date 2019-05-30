@@ -1,153 +1,17 @@
 <div class="col-md-12" style="top:25px;">
-  <div class="row">
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-  </div>
-
-  <div class="row">
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-  </div>
-  <div class="row">
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
+  <div class="row" *ngFor="let i of iRows">
+    <div class="col" *ngFor="let i of iCols">
+      <img class="thumb" (click)="btnClick()" alt=""
+        src="http://www.fiveminutefolklore.com/wp-content/uploads/2017/10/youtube-play-button-transparent-png-15.png">
+    </div>
   </div>
 </div>
 
 <div class="top-left">
   <div class="text-center">
-    <ul class="list-group">
-      <li class="list-group-item">
-        Tolliver, Anthony
-      </li>
-
-      <li class="list-group-item">
-        Gaddy, Abdul
-      </li>
-
-      <li class="list-group-item">
-        Randle, Chasson
-      </li>
-
-      <li class="list-group-item">
-        Milton, Malik
-      </li>
-
-      <li class="list-group-item">
-        Artis, Jamel
-      </li>
-
-      <li class="list-group-item">
-        Nunn, Kendrick
-      </li>
-
-      <li class="list-group-item">
-        Daniels, Troy
-      </li>
-
-      <li class="list-group-item">
-        Harkless, Maurice
-      </li>
-
-      <li class="list-group-item">
-        Ferrell, Kevin
-      </li>
-
-      <li class="list-group-item">
-        Davis, Edward
-      </li>
-
-      <li class="list-group-item">
-        Johnson, Nicholas
-      </li>
-
-      <li class="list-group-item">
-        Whitehead, Isaiah
+    <ul class="list-group" *ngIf="players">
+      <li class="list-group-item" *ngFor="let player of players">
+        {{ player }}
       </li>
     </ul>
   </div>
@@ -155,53 +19,9 @@
 
 <div class="top-right">
   <div class="text-center">
-    <ul class="list-group">
-      <li class="list-group-item">
-        Atlanta Dream
-      </li>
-
-      <li class="list-group-item">
-        Atlanta Hawks
-      </li>
-
-      <li class="list-group-item">
-        Boston Celtics
-      </li>
-
-      <li class="list-group-item">
-        Brooklyn Nets
-      </li>
-
-      <li class="list-group-item">
-        Charlotte Hornets
-      </li>
-
-      <li class="list-group-item">
-        Chicago Bulls
-      </li>
-
-      <li class="list-group-item">
-        Chicago Sky
-      </li>
-
-      <li class="list-group-item">
-        Cleveland Cavaliers
-      </li>
-
-      <li class="list-group-item">
-        Connecticut Sun
-      </li>
-
-      <li class="list-group-item">
-        Dallas Mavericks
-      </li>
-
-      <li class="list-group-item">
-        Houston Rockets
-      </li>
-
-      <li class="list-group-item">
-        Indiana Pacers
+    <ul class="list-group" *ngIf="teams">
+      <li class="list-group-item" *ngFor="let team of teams">
+        {{ team }}
       </li>
     </ul>
   </div>
